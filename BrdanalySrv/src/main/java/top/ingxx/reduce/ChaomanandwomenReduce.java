@@ -1,0 +1,24 @@
+package top.ingxx.reduce;
+
+import org.apache.flink.api.common.functions.ReduceFunction;
+import top.ingxx.entity.ChaomanAndWomenInfo;
+
+import java.util.List;
+
+public class ChaomanandwomenReduce implements ReduceFunction<ChaomanAndWomenInfo> {
+    @Override
+    public ChaomanAndWomenInfo reduce(ChaomanAndWomenInfo chaomanAndWomenInfo1, ChaomanAndWomenInfo chaomanAndWomenInfo2) throws Exception {
+        String userid = chaomanAndWomenInfo1.getUserid();
+        List<ChaomanAndWomenInfo> list1 = chaomanAndWomenInfo1.getList();
+
+        List<ChaomanAndWomenInfo> list2 = chaomanAndWomenInfo2.getList();
+
+        list1.addAll(list2);
+
+        ChaomanAndWomenInfo chaomanAndWomenInfofinal = new ChaomanAndWomenInfo();
+        chaomanAndWomenInfofinal.setUserid(userid);
+        chaomanAndWomenInfofinal.setList(list1);
+
+        return chaomanAndWomenInfofinal;
+    }
+}
