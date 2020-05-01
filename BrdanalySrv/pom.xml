@@ -64,7 +64,7 @@
         <dependency>
             <groupId>org.apache.lucene</groupId>
             <artifactId>lucene-core</artifactId>
-            <version>4.2.0</version>
+            <version>7.1.0</version>
         </dependency>
         <dependency>
             <groupId>top.ingxx</groupId>
@@ -96,7 +96,7 @@
         <dependency>
             <groupId>org.apache.lucene</groupId>
             <artifactId>lucene-core</artifactId>
-            <version>4.2.0</version>
+            <version>7.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.flink</groupId>
